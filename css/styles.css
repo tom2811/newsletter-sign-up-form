@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'myFont';
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+:root {
+    --primary-tomato: hsl(4, 100%, 67%);
+    --neutral-dark-slate-grey: hsl(234, 29%, 20%);
+    --neutral-charcoal-grey: hsl(235, 18%, 26%);
+    --neutral-grey: hsl(231, 7%, 60%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'myFont', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--neutral-charcoal-grey);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.sign-up-card {
+    background-color: var(--neutral-white);
+    width: 60rem;
+    border-radius: 2.2rem;
+    justify-content: space-between;
+    padding: 1.4rem;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 54%;
+    margin: auto;
+    padding-left: 2.5rem;
+    padding-right: 4rem;
+}
+
+.right {
+    width: 46%;
+}
+
+.right img {
+    width: 100%;
+    height: 100.5%;
+    padding-right: 0.2rem;
+}
+
+.sign-up-card .left h1 {
+    width: 100%;
+    font-family: inherit;
+    font-size: 3.6rem;
+    padding-bottom: 0.3rem;
+}
+
+.left p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-top: -1rem;
+}
+
+.left ul {
+    list-style-image: url(/assets/images/icon-list.svg);
+}
+
+.left ul li {
+    line-height: 2;
+    font-size: 1rem;
+}
+
+li span {
+    position: relative;
+    top: -0.4rem;
+    margin-left: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.label-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error-email {
+    color: var(--primary-tomato);
+}
+
+.left form label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: -0.5rem;
+}
+
+#email-input {
+    border: 1px solid var(--neutral-grey);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#email-input:focus {
+    outline: none;
+    background-color: var(--neutral-white);
+}
+
+button {
+    background-color: var(--neutral-dark-slate-grey);
+    color: var(--neutral-white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.3rem;
+    width: 100%;
+    cursor: pointer;
+    transition: active 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--primary-tomato);
+    box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+.success-card {
+    background-color: var(--neutral-white);
+    width: 33rem;
+    padding: 3rem 4rem;
+    display: none;
+    border-radius: 2.3rem;
+}
+
+.success-card h1 {
+    padding-top: 2rem;
+    padding-bottom: 1.6rem;
+    font-size: 3.7rem;
+    line-height: 1;
+}
+
+.success-card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.success-card button {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
